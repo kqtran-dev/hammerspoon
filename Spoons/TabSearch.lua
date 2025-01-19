@@ -1,20 +1,21 @@
-local obj = {}
-obj.__index = obj
+local TabSearch = {}
 
-function obj:init()
-    -- Initialize the Spoon (if needed, you can add configuration setup here)
+function TabSearch.trigger()
+    local frontApp = hs.application.frontmostApplication()
+    if frontApp:name() == "Firefox" then
+        -- hs.alert("Triggering Tab Search in Firefox!")
+        -- 
+        -- Focus the address bar
+        hs.eventtap.keyStroke({"cmd"}, "l")  -- Cmd+L equivalent to focus address bar
+
+        -- Small delay before typing %
+        -- hs.timer.doAfter(0.2, function()
+            hs.eventtap.keyStrokes("% ")
+        -- end)
+    else
+        -- hs.alert("This shortcut only works in Firefox!")
+    end
 end
 
-function obj:trigger()
-    -- Focus the address bar
-    hs.eventtap.keyStroke({"cmd"}, "l")  -- Simulates Command + L (macOS equivalent of Ctrl + L)
-    
-    -- Delay to ensure the address bar is focused
-    hs.timer.doAfter(0.1, function()
-        -- Type '%' followed by a space
-        hs.eventtap.keyStrokes("% ")
-    end)
-end
-
-return obj
+return TabSearch
 
