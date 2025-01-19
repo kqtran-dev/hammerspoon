@@ -1,5 +1,3 @@
--- File: ~/.hammerspoon/init.lua
-
 -- Require the TabSearch module
 local TabSearch = require("Spoons.tabsearch")
 
