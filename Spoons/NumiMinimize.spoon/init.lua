@@ -28,6 +28,9 @@ function obj:bindHotkey()
 
         -- If Numi is running but not focused, activate it and send Cmd+Shift+C
         numiApp:activate()
+        -- raise the window
+        log.d("Raising Window")
+        hs.application.launchOrFocus("Numi")
         log.d("Sending Cmd+Shift+C")
         hs.eventtap.keyStroke({"cmd", "shift"}, "c", numiApp)
     end)
