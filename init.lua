@@ -9,8 +9,13 @@ hs.hotkey.bind({"cmd"}, "0", cmd0.trigger)
 -- Load the NumiMinimize Spoon
 hs.loadSpoon("NumiMinimize")
 
+
 -- Bind the hotkey using the Spoon
 spoon.NumiMinimize:bindHotkey()
+
+-- Load the NumiMinimize Spoon
+hs.loadSpoon("DesktopSwitcher")
+spoon.DesktopSwitcher:start()
 
 -- Notify that Hammerspoon is ready
 hs.alert("Hammerspoon Config Loaded!")
