@@ -1,10 +1,10 @@
 -- Require the TabSearch module
 local TabSearch = require("Spoons.tabsearch")
-local cmd0 = require("Spoons.cmd0")
+-- local cmd0 = require("Spoons.cmd0")
 
 -- Bind the TabSearch trigger to Ctrl+Shift+A
 hs.hotkey.bind({"ctrl", "shift"}, "A", TabSearch.trigger)
-hs.hotkey.bind({"cmd"}, "0", cmd0.trigger)
+-- hs.hotkey.bind({"cmd"}, "0", cmd0.trigger)
 
 -- Load the NumiMinimize Spoon
 hs.loadSpoon("NumiMinimize")

@@ -3,8 +3,8 @@ obj.__index = obj
 obj.name = "DesktopSwitcher"
 
 local lastPress = {}
-local doubleTapTime = 0.25
-local sendOriginalKeyDelay = 0.26 -- Slightly longer than doubleTapTime
+local doubleTapTime = 0.15
+local sendOriginalKeyDelay = 0.16 -- Slightly longer than doubleTapTime
 
 function obj:getFocusedWindowInfo()
     local win = hs.window.focusedWindow()
