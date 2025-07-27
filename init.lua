@@ -14,8 +14,9 @@ hs.loadSpoon("NumiMinimize")
 spoon.NumiMinimize:bindHotkey()
 
 -- Load the NumiMinimize Spoon
-hs.loadSpoon("DesktopSwitcher")
-spoon.DesktopSwitcher:start()
+-- disabling in favor of aerospace config
+-- hs.loadSpoon("DesktopSwitcher")
+-- spoon.DesktopSwitcher:start()
 
 -- Notify that Hammerspoon is ready
 hs.alert("Hammerspoon Config Loaded!")
